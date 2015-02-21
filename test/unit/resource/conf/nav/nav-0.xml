@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nav name="default">
+    <menu name="Billing" url="/" cssClass="navbar-brand"/>
+    <menu name="VM" url="/vm">
+        <menu name="Vm List" url="/vm" />
+        <menu name="New Vm" url="/vm/new" />
+    </menu>
+    <menu name="Bill" url="/bill" />
+</nav>
