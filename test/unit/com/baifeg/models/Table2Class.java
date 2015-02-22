@@ -27,8 +27,6 @@ public class Table2Class
 	private final static Configuration cfg = new Configuration(new Version("2.2"));
 	private final static String TEMP_DIR_NAME = System.getProperty("user.dir") + "/tmp";
 	private final static String ENTITY_FTL_NAME = "entity.ftl";
-	private final static String SQL_DIR = System.getProperty("user.dir")
-			+ "/conf/evolutions/default";
 
 	static
 	{
@@ -51,7 +49,6 @@ public class Table2Class
 		{
 			Connection conn = DriverManager.getConnection(JDBC_URL);
 
-			sourceSql(conn, SQL_DIR);
 			DatabaseMetaData metaData = conn.getMetaData();
 
 			ResultSet columns;
@@ -68,12 +65,6 @@ public class Table2Class
 			e.printStackTrace();
 		}
 		
-	}
-
-	private static void sourceSql(Connection conn, String sqlDir)
-	{
-		conn.g
-
 	}
 
 	private static void generateEntity(String tableName, ResultSet columns) throws SQLException,
